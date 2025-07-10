@@ -1,1 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Settings - Lunar Launcher</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .setting-section {
+      max-width: 600px;
+    }
+    .setting {
+      margin-bottom: 30px;
+    }
+    .setting label {
+      font-size: 18px;
+      display: block;
+      margin-bottom: 10px;
+    }
+    .toggle-button {
+      background-color: #00c0ff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .toggle-button:hover {
+      background-color: #00e5ff;
+    }
+    input[type="range"] {
+      width: 100%;
+      margin-top: 10px;
+      accent-color: #00c0ff;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <div class="sidebar">
+      <h2>Lunar Launcher</h2>
+      <a href="index.html">🏠 Home</a>
+      <a href="servers.html">🖥️ Servers</a>
+      <a href="settings.html">⚙️ Settings</a>
+    </div>
+    <div class="content setting-section">
+      <h1>⚙️ Settings</h1>
+
+      <div class="setting">
+        <label for="fpsBoost">Enable FPS Boost</label>
+        <button class="toggle-button" onclick="toggle(this)">ON</button>
+      </div>
+
+      <div class="setting">
+        <label for="brightness">Brightness Level</label>
+        <input type="range" id="brightness" name="brightness" min="0" max="100" value="60" />
+      </div>
+
+      <div class="setting">
+        <label for="uiScale">UI Scale</label>
+        <input type="range" id="uiScale" name="uiScale" min="50" max="150" value="100" />
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script>
+    function toggle(button) {
+      button.textContent = button.textContent === 'ON' ? 'OFF' : 'ON';
+    }
+  </script>
+</body>
+</html>
 
