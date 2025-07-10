@@ -1,1 +1,134 @@
+/* --- GLOBAL RESET & BACKGROUND --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-image: url('../assets/your-background-image.png'); /* Update path as needed */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* --- OVERLAY CONTAINER --- */
+.overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+/* --- SIDEBAR --- */
+.sidebar {
+  width: 250px;
+  background-color: rgba(18, 18, 18, 0.9);
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+}
+.sidebar h2 {
+  color: #00c0ff;
+  margin-bottom: 30px;
+  font-size: 24px;
+  text-align: center;
+}
+.sidebar a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  margin: 15px 0;
+  transition: all 0.3s ease;
+  position: relative;
+}
+.sidebar a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #00c0ff;
+  transition: width 0.3s ease;
+}
+.sidebar a:hover {
+  color: #00c0ff;
+  transform: translateX(10px);
+}
+.sidebar a:hover::after {
+  width: 100%;
+}
+
+/* --- CONTENT SECTION --- */
+.content {
+  flex-grow: 1;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.content h1 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+.content p {
+  font-size: 16px;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+/* --- LAUNCH BUTTON --- */
+.launch-button {
+  background-color: #00c0ff;
+  color: white;
+  border: none;
+  padding: 14px 30px;
+  font-size: 18px;
+  border-radius: 10px;
+  margin-top: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.launch-button:hover {
+  background-color: #00e5ff;
+  transform: scale(1.05);
+}
+
+/* --- SPINNER --- */
+.spinner {
+  margin-top: 20px;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid #00c0ff;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  animation: spin 1s linear infinite;
+  display: none;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* --- TOAST --- */
+.toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #00c0ff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 999;
+}
+.toast.show {
+  opacity: 1;
+}
 
