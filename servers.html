@@ -1,1 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Servers - Lunar Launcher</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="overlay">
+    <div class="sidebar">
+      <h2>Lunar Launcher</h2>
+      <a href="index.html">🏠 Home</a>
+      <a href="servers.html">🖥️ Servers</a>
+      <a href="settings.html">⚙️ Settings</a>
+    </div>
+    <div class="content">
+      <h1>🌐 Browse Minecraft Servers</h1>
+      <div class="server-grid">
+        <div class="server-card">
+          <div class="server-name">Hypixel Network</div>
+          <div class="server-status">Online - 75,000 players</div>
+          <button class="join-button" onclick="copyIP('mc.hypixel.net')">Join</button>
+        </div>
+        <div class="server-card">
+          <div class="server-name">PvP Legacy</div>
+          <div class="server-status">Online - 2,300 players</div>
+          <button class="join-button" onclick="copyIP('play.pvplegacy.net')">Join</button>
+        </div>
+        <div class="server-card">
+          <div class="server-name">CoolCraft SMP</div>
+          <div class="server-status offline">Offline</div>
+          <button class="join-button" disabled>Offline</button>
+        </div>
+      </div>
+      <div id="toast" class="toast">IP copied to clipboard!</div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
 
