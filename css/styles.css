@@ -6,7 +6,7 @@
 }
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-image: url('../assets/your-background-image.png'); /* Update path as needed */
+  background-image: url('../assets/bg.png'); /* Update path as needed */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
