@@ -1,1 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Launching - Lunar Launcher</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .launch-screen {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+    h1 {
+      font-size: 32px;
+      color: #00c0ff;
+      margin-bottom: 20px;
+    }
+    .progress-bar {
+      width: 300px;
+      height: 16px;
+      background-color: #444;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-top: 20px;
+    }
+    .progress-fill {
+      height: 100%;
+      background-color: #00c0ff;
+      animation: fill 3s ease forwards;
+    }
+    @keyframes fill {
+      0% { width: 0; }
+      100% { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <div class="launch-screen">
+      <h1>🚀 Launching Minecraft...</h1>
+      <div class="spinner"></div>
+      <div class="progress-bar">
+        <div class="progress-fill"></div>
+      </div>
+      <p style="margin-top: 30px;">Please wait while we prepare your game environment.</p>
+    </div>
+  </div>
+</body>
+</html>
 
